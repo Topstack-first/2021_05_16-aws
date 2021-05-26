@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link type="text/css" rel="stylesheet" href="./track-and-trace.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.menu-center{
+  font-family:Delivery Regular;
+  left:50%;
+  top: 40%; 
+  position: absolute;
+}
+
+.menu-center a{
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.menu-center a:hover{
+  color:black;
+  text-decoration:none;
+}
+.lang-right{
+  font-family:Delivery Regular;
+  color:white;
+  right:2%;
+  top:40%;
+  position: absolute;
+}
+.lang-right a{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.lang-right a:hover{
+  color: black;
+  text-decoration:none;
+}
+.color-black{
+  color: black;
+}
+.color-white{
+  color:white;
+}
+.tracking-btn{
+  color: #fff;                                                                                                                 
+  font-family: Delivery Regular;
+  border-radius: 20px;
+  background-color: #5DD17B;
+  border: none;
+  margin-bottom: 10px;
+}
+.tracking-btn:hover{
+  background-color: #49cb6b;
+}
+.rate-btn{
+  color: rgb(0, 0, 0);
+  background-color: #F6F6F6;
+  border: none;
+  box-shadow: none;
+  font-weight: 300;
+  font-family: Delivery Regular;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+.rate-btn:hover{
+  background-color:#ccc;
+}
+</style>
+</head>
+<body>
+  <nav class="navbar" style="background-color:#ED6561;height: 10vh;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img src="./logotype.svg" width="100" height="50" class="inline-block  stroke-current lg:ml-1"/>
+        </a>
+      </div>
+      <div class="lang-right">
+        <a href="#"  class="color-white no-underline">Support</a>
+        <a href="#" class="color-white no-underline">About Team</a>
+        <a id="en" href="#" class="color-black no-underline" onclick="changeLanguageToEN()">EN</a>
+        |
+        <a id="fr" href="#" class="color-white no-underline" onclick="changeLanguageToFR()">FR</a>
+      </div>
+    </div>
+  </nav>
+  <div id="dhl-track-and-trace-component"
+  data-locale="en-BE"
+  style="min-height: 73vh;">
+  </div>
+ 
+  <div id="trackrate" class="col-md-3 col-xs-3" style="margin-bottom: 80px;">
+    <div class="text-center" style="margin-top: 20px;">
+      <a id="tracking_btn" href="#" target="_self" class="btn btn-success tracking-btn" >
+        <span id="track-text">Suivi transporteur </span><i class="material-icons" style="font-size:14px;">arrow_forward</i>
+      </a>
+      <div id="tracking_info" class="info" style="font-family:Delivery Regular;color: #777777;">Cliquez ici pour suivre votre colis sur le site du transporteur</div>
+    </div>
+    <div class="text-center" style="margin-top: 20px;">
+      <a id="rate_btn" href="/rate-page" data-mode="2" target="_blank" class="btn rate-btn" style="color: #777777;">
+        <span id="rate-text">Notez votre expédition </span><i class="material-icons" style="font-size:14px;">arrow_forward</i>
+      </a>
+      <div id="rate_info" class="info" style="font-family:Delivery Regular;color: #777777;">Une fois livré, vous aurez la possibilité de noter la livraison et l'emballage de votre colis</div>
+    </div>
+  </div>
+  
+    <script>
+      function changeLanguageToFR()
+      {
+        localStorage.setItem("language","fr-BE");
+        document.location.href = document.location.href;
+      }
+      function changeLanguageToEN()
+      {
+        localStorage.setItem("language","en-BE");
+        document.location.href = document.location.href;
+      }
+      function loadLanguageFromLocalStorage()
+      {
+        var lan = localStorage.getItem("language");
+        $("#dhl-track-and-trace-component").attr("data-locale",lan);
+        $("#selectlan").text(lan.substr(0,2).toUpperCase());
+
+        if(lan == "en-BE")
+        {
+          $("#track-text").text("Shipment tracking");
+          $("#tracking_info").text("Click here to track your shipment on the shipment provider's website");
+          $("#rate-text").text("Rate your shipment ");
+          $("#rate_info").text("Once delivered, you will be able to rate the delivery of your shipment as well as the quality of the packaging");
+          $("#en").attr("class","color-black");
+          $("#fr").attr("class","color-white");
+        }
+        else{
+          $("#track-text").text("Suivi transporteur ");
+          $("#tracking_info").text("Cliquez ici pour suivre votre colis sur le site du transporteur");
+          $("#rate-text").text("Notez votre expédition ");
+          $("#rate_info").text("Une fois livré, vous aurez la possibilité de noter la livraison et l'emballage de votre colis");
+          $("#en").attr("class","color-white");
+          $("#fr").attr("class","color-black");
+        }
+        
+      }
+      function showTrackRate()
+      {
+        $("#trackrate").show();
+        var trackingCode = $("#trackingCode").attr("value");
+        $("#tracking_btn").attr("href","/shipment-tracking?trackingNumber="+trackingCode);
+      }
+      function hideTrackRate()
+      {
+        $("#trackrate").hide();
+      }
+      loadLanguageFromLocalStorage();
+      hideTrackRate();
+
+    </script>
+    <script type="text/javascript" src="./track-and-trace.js"></script>
+  <footer class="col-md-12 col-xs-12" style="background-color:#ED6561;text-align: center;align-items: center;vertical-align:middle; min-height: 80px;">
+    <div>
+      <p style="top: 50%;font-family: Delivery Regular;color: white;"><br>2020-11-25  All rights reserved.<br>  
+    </div>
+    
+  </footer>
+</body>
+</html>
+
+
+

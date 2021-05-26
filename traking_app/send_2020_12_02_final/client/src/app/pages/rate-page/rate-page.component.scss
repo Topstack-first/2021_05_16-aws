@@ -1,0 +1,38 @@
+.css-166tz6a{
+    visibility:visible;
+    opacity:1;
+    -webkit-transition:opacity 200ms ease,
+    visibility 0s linear 0s;
+    transition:opacity 200ms ease,visibility 0s linear 0s;
+    background:rgba(0,0,0,0.85);
+    position:fixed;
+    overflow:auto;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:10001;
+    min-height:100%;
+}
+.css-1x7v7yu {
+    visibility: visible;
+    opacity: 1;
+    position: fixed;
+    max-width: 100%;
+    z-index: 10001;
+    -webkit-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    width: 800px;
+    height: 100%;
+    top: 0;
+    left: 0px;
+}
+.css-z587cd {
+    position: absolute;
+    padding: 8px;
+    cursor: pointer;
+    width: initial;
+    max-width: initial;
+    top: 12px;
+    right: -38px;
+}

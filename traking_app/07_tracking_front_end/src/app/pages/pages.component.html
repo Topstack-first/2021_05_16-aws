@@ -1,0 +1,503 @@
+
+<div>
+    <!--iframe #frame src="/assets/libs/track-and-trace/track-and-trace.html" style="border:0px solid black;width:100vw;height:100vh;"-->
+    <header class="relative pt-1 sm:pt-4 px-1 sm:px-4 mb-14 lg:mb-17 lg:pb-3 block z-999" role="banner">
+        <div class="nav absolute z-60 header--fixed top headroom--bottom">
+          <div class="relative xl:flex xl:items-center xl:justify-between xl:pb-2 xl:bg-gradient" style="width: 100vw;">
+            <div class="xl:flex xl:pt-4 xl:pb-0 xl:ml-4">
+              <div class="mobile:bg-gradient justify-between items-center xl:items-stretch flex py-2 xl:py-0 xl:mr-4">
+                <div>
+                  <div data-hamburger="" class="hamburger cursor-pointer select-none inline-block xl:hidden lg:hidden">
+                    <div class="hamburger__open"></div>
+                    <div class="hamburger__close"></div>
+                  </div>
+                  <a href="#" style="margin-left: 50px;">
+                    <img src="assets/libs/track-and-trace/logotype.svg" width="100" height="50" class="inline-block  stroke-current lg:ml-1 xl:pb-2"/>
+                  </a>
+                </div>
+                <div class="additional-menu-mobile xl:hidden flex items-center xl:items-stretch mr-2">
+                    <div class="hidden lg:inline-block">
+                      <ul class="secondary-menu menu list-reset lg:flex pb-3 lg:pb-0 lg:bg-transparent">
+                        <li class="menu-item">
+                            <a class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular"
+                              href="#" style="color: gray;">Support</a>
+                          </li>
+                          <li class="menu-item">
+                            <a class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular"
+                              href="#" style="color: gray;">About Team</a>
+                          </li>
+                          <li class="menu-item">
+                                <a id="en-2" href="#"  style="color: gray;" class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular" (click)="changeLanguageToEN()" >EN</a>
+                                |
+                                <a id="fr-2" href="#" style="color: black;" class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular" (click)="changeLanguageToFR()">FR</a>
+                            </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+              <div>
+                <div class="absolute pin-t pb-2 xl:pb-0 xl:hidden w-full"></div>
+                <div data-hamburger-target="" class="hidden xl:block">
+                    
+                  <div class="lg:hidden">
+                    <ul class="secondary-menu menu list-reset lg:flex pb-2 lg:pb-0 bg-white lg:bg-transparent">
+                      <li class="menu-item">
+                        <a class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular"
+                          href="#" style="color: gray;">Support</a>
+                      </li>
+                      <li class="menu-item">
+                        <a class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular"
+                          href="#" style="color: gray;">About Team</a>
+                      </li>
+                      <li class="menu-item">
+                            <a id="en-2" href="#"  style="color: gray;" class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular" (click)="changeLanguageToEN()" >EN</a>
+                            |
+                            <a id="fr-2" href="#" style="color: black;" class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular" (click)="changeLanguageToFR()">FR</a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="xl:flex items-center xl:pt-2 xl:mr-4">
+              <div class="hidden xl:block">
+                <div class="secondary-to-clone">
+                  <ul class="secondary-menu menu list-reset lg:flex pb-2 lg:pb-0 lg:bg-transparent">
+                    <li class="menu-item">
+                      <a class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular"
+                        href="#" style="color: gray;">Support</a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular"
+                        href="#" style="color: gray;">About Team</a>
+                    </li>
+                    <li class="menu-item">
+                        <a id="en-1" href="#" style="color: gray;" class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular" (click)="changeLanguageToEN()">EN</a>
+                        |
+                        <a id="fr-1" href="#" style="color: black;" class="inline-block p-2 pt-2 pb-0 lg:p-1 no-underline lg:text-xs hover:text-secondary font-default lg:font-regular" (click)="changeLanguageToFR()">FR</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <!--nav class="navbar navbar-expand-lg" style="background-color:#ED6561;height: 10vh;">
+        <a class="navbar-brand" href="#">
+            <img src="assets/libs/track-and-trace/logotype.svg" width="100" height="50" class="inline-block  stroke-current lg:ml-1"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse lang-right" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a href="#"  class="color-white no-underline">Support</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="color-white no-underline">About Team</a>
+            </li>
+            <li class="nav-item">
+                <a id="en" href="#" class="color-black no-underline" (click)="changeLanguageToEN()">EN</a>
+                |
+                <a id="fr" href="#" class="color-white no-underline" (click)="changeLanguageToFR()">FR</a>
+            </li>
+          </ul>
+        </div>
+    </nav-->
+    <div id="dhl-track-and-trace-component" data-tracking-code="" data-postcode="" data-locale="en-BE" style="min-height: 73vh;margin-bottom: 70px;">
+        <div class="styles__app___1X2Zt">
+            <!-- input from for tracking number-->
+            <div class="o-grid o-container u-margin-top-4x u-margin-bottom-8x u-margin-vertical-8x@tablet">
+                <div class="u-grid-column-start-1-end-13 u-grid-column-start-3-end-8@tablet u-margin-bottom-3x u-margin-bottom-none@tablet">
+                <label for="trackingCode" class="label">{{labelShipment_number}}</label>
+                <input id="trackingCode" [(ngModel)]="trackingNumber" type="search" class="styles__no-rounded-borders___25vqh input">
+                </div>
+                <div class="u-grid-column-start-9-end-10 u-grid-column-start-8-end-9@tablet">
+                <button type="button" (click)="getShipmentStatuses()" aria-label="Zoek gegevens" name="" id="search" aria-disabled="false" class="c-button-not-visible u-margin-top-3x" tabindex="0">
+                    <span class="u-display-inline-block u-align-middle u-font-family-bold">
+                    <svg class="c-arrow-icon button-new--indicator__icon icons-textcolor u-margin-bottom-none c-arrow-icon--right" width="20px" height="20px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g id="arrow-(2)" transform="translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000) ">
+                        <circle fill="#D40511" cx="16" cy="16" r="16"></circle>
+                        <polygon fill="#FFFFFF" points="17.0868966 15.849931 12.406069 11.168 14.7464828 8.82758621 19.4284138 13.5095172 21.7677241 15.849931 14.7464828 22.8722759 12.406069 20.5318621"></polygon>
+                        </g>
+                    </svg>
+                    </span>
+                </button>
+                </div>
+            </div>
+            <!--state of progress bar-->
+            <section id="progressbar-label" class="o-container">
+                <div class="heading-h1-headline">
+                {{labelFollowYourShipment}}
+                </div>
+                <h1 class="heading-h1">{{followYourShipmentStatus}}</h1>
+            </section>
+            <!--progress bar-->
+            <section id="progressbar" class="o-container u-margin-top-4x u-margin-bottom-5x u-margin-vertical-8x@tablet">
+                <ul class="styles__list___1OisM">
+                    <li id="shipping-info-received" class="styles__item___Ktb5T">
+                        <div class="styles__icon___5io2w styles__active___1A2BM">
+                        <svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.5 6.554L11.53.184.5 6.52v9.39l10.99 6.368 11.01-6.334V6.554zm-11.02 5.79L7.835 10.27l8.957-5.193 3.696 2.146-9.008 5.12zm3.725-8.19L6.23 9.36 2.468 7.22l9.06-5.2 3.678 2.135zM2.09 8.055l8.93 5.076v7.04L2.09 14.99v-6.94zm9.842 12.135v-7.057l8.98-5.103v6.993l-8.98 5.166zm-6.11-7.122v2.815l4.075 2.303V15.37l-4.074-2.302z">
+                            </path>
+                        </svg>
+                        </div>
+                        <p class="text styles__iconText___3GPjw u-font-family-cn u-font-weight-bold u-margin-top u-display-none@mobile u-display-block@tablet text--">
+                        {{progShippingInfomationReceived}}
+                        </p>
+                    </li>
+                    <li id="in-transit" class="styles__item___Ktb5T">
+                        <div class="styles__icon___5io2w styles__active___1A2BM">
+                        <svg width="23" height="15" viewBox="0 0 23 15" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.85 3.976c-1.263-1.27-3.135-1.247-3.378-1.24l-2.735-.007.006-2.718L.013 0 0 12.187h2.31c.266 1.116 1.27 1.955 2.47 1.955 1.198 0 2.203-.833 2.468-1.95l8.472.013v-.012h.395c.26 1.122 1.27 1.967 2.47 1.967 1.205 0 2.21-.84 2.475-1.96h1.926l.006-4.975c.03-.313.1-2.003-1.14-3.25zM4.78 12.713c-.61 0-1.106-.497-1.106-1.105s.497-1.105 1.105-1.105 1.104.497 1.104 1.105-.496 1.105-1.105 1.105zm.005-3.645c-1.105 0-2.038.703-2.393 1.69h-.95l.01-9.317 12.844.013V2.73h-.018l-.012 8.033-7.094-.006c-.35-.98-1.282-1.69-2.387-1.69zm13.806 3.657c-.608 0-1.104-.497-1.104-1.105 0-.61.496-1.105 1.105-1.105.61 0 1.105.496 1.105 1.105 0 .614-.496 1.105-1.104 1.105zm2.972-5.613l-.006.042-.006 3.61h-.573c-.354-.975-1.288-1.678-2.386-1.684-1.098 0-2.032.697-2.386 1.677h-.484l.005-6.586 2.747.007h.036c.012 0 1.447-.048 2.316.82.856.845.738 2.11.738 2.115zm-2.753-1.99H16.5l-.007 3.036 4.27.006V7.036s-.01-.963-.518-1.43c-.508-.467-1.436-.484-1.436-.484zm1.24 2.32l-2.836-.005v-1.6h1.583c.207.005.733.082.957.295.19.17.284.644.29.91l.006.4z">                  
+                            </path>
+                        </svg>
+                        </div>
+                        <p class="text styles__iconText___3GPjw u-font-family-cn u-font-weight-bold u-margin-top u-display-none@mobile u-display-block@tablet text--">
+                        {{prgInTransit}}
+                        </p>
+                        <div id="in-transit-line" class="styles__line___rtDSs">
+                        </div>
+                    </li>
+                    <li id="out-for-delivery" class="styles__item___Ktb5T">
+                        <div class="styles__icon___5io2w styles__active___1A2BM">
+                            <svg id="out-for-delivery-svg" width="21" height="22" viewBox="0 0 21 22" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.94 8.948v-.1c.005-2.5.007-5.086-1.758-6.856C15.844.652 13.672 0 10.547 0 7.42 0 5.25.65 3.912 1.992 2.147 3.762 2.15 6.346 2.154 8.846v.078C.874 9.226 0 10.4 0 11.934c0 1.795.972 2.898 2.69 3.094 1.393 4.22 4.233 6.628 7.857 6.628 2.015 0 3.853-.792 5.315-2.292 1.342-1.377 2.115-3.053 2.55-4.364C20.04 14.793 21 13.68 21 11.934c0-1.497-.83-2.65-2.06-2.986zm-1.527.242c0 .752-.124 1.027-.176 1.11-.027.042-.044.067-.187.067-.41 0-1.12-.276-1.872-.568-1.278-.498-2.868-1.117-4.63-1.117s-3.353.62-4.632 1.116c-.753.29-1.462.567-1.87.567-.146 0-.162-.025-.188-.067-.054-.083-.176-.358-.176-1.11v-.16c.612-.06 1.347-.298 2.182-.566 1.318-.424 2.957-.95 4.683-.95s3.367.526 4.684.95c.835.267 1.57.503 2.183.564v.162zM4.99 3.07C6.03 2.034 7.847 1.53 10.547 1.53s4.517.505 5.554 1.543c1.217 1.22 1.308 3.158 1.313 5.25-.525-.065-1.202-.28-1.967-.527-1.365-.438-3.063-.984-4.9-.984-1.836 0-3.534.544-4.9.983-.764.246-1.44.462-1.966.527.003-2.092.095-4.03 1.31-5.25zm12.847 10.436h-.574l-.16.55c-.41 1.425-2.098 6.07-6.556 6.07-4.32 0-6.02-4.23-6.55-6.046l-.16-.55h-.573c-1.234 0-1.736-.463-1.736-1.6 0-.567.212-1.21.772-1.456.253.943.837 1.42 1.746 1.42.695 0 1.497-.313 2.425-.673 1.22-.473 2.603-1.01 4.08-1.01 1.474 0 2.856.537 4.076 1.01.928.363 1.73.673 2.425.673.896 0 1.475-.462 1.736-1.38.498.27.688.878.688 1.418-.003 1.09-.507 1.576-1.637 1.576zm-10.22-1.74c-.577 0-1.044.468-1.044 1.045 0 .578.467 1.045 1.044 1.045.576 0 1.044-.467 1.044-1.044 0-.576-.467-1.043-1.043-1.043zm5.752 0c-.578 0-1.045.468-1.045 1.045 0 .578.467 1.045 1.044 1.045.576 0 1.043-.467 1.043-1.044 0-.576-.467-1.043-1.044-1.043z"></path>
+                            </svg>
+                        </div>
+                        <p class="text styles__iconText___3GPjw u-font-family-cn u-font-weight-bold u-margin-top u-display-none@mobile u-display-block@tablet text--">
+                        {{progOutForDelivery}}
+                        </p>
+                        <div id="out-for-delivery-line" class="styles__line___rtDSs styles__filled___BV_vL"></div>
+                        
+                    </li>
+                    <li id="delivered" class="styles__item___Ktb5T">
+                        <div class="styles__icon___5io2w styles__active___1A2BM">
+                        <svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.78 9.087h3.418v3.18h-3.42v-3.18zM11.527.5L0 12.982l1.352 1.272 1.113-1.192V23h18.047v-9.938l1.113 1.192 1.352-1.272L11.527.5zm1.83 20.592H9.62v-5.247h3.737v5.247zm5.326 0H14.31V14.97H8.826v6.122H4.452V10.995l7.156-7.712 7.155 7.95-.08 9.86z"></path>
+                        </svg>
+                        </div>
+                        <p class="text styles__iconText___3GPjw u-font-family-cn u-font-weight-bold u-margin-top u-display-none@mobile u-display-block@tablet text--">
+                        {{progDelivered}}
+                        </p>
+                        <div id="delivered-line" class="styles__line___rtDSs styles__filled___BV_vL"></div>
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="status-msg" class="o-container u-padding-vertical-5x u-bg-color-grey-40">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="heading-h2-headline u-margin-bottom">
+                        {{statusMessage}}
+                        </div>
+                        <h2 class="heading-h2 u-margin-bottom">{{statusDate}}</h2>
+                        <div class="heading-h2-subtitle styles__deliveryInfo___2am1W">{{statusTime}}</div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <!--div id="trackrate" class="col-sm-4"-->
+                        <div class="text-center col-sm-4">
+                            <a id="tracking_btn" href="{{carrierUrl}}" target="_blank" class="tracking-btn" >
+                                <span id="track-text" style="color: white;">{{carrierTrackButtonText}} </span><i class="material-icons" style="font-size:14px;color: white;">arrow_forward</i>
+                            </a>
+                            <div id="tracking_info" class="info" style="font-family:Delivery Regular;font-size: 14px;color: #777777;">{{carrierTrackText}}</div>
+                        </div>
+                        <div class="text-center col-sm-4">
+                            <a id="rate_btn" (click)="showRateForm()" href="#" data-mode="2" target="_self" class="tracking-btn" style="color: #777777;">
+                                <span id="rate-text" style="color:  white;">{{rateButtonText}} </span><i class="material-icons" style="font-size:14px;color: white">arrow_forward</i>
+                            </a>
+                            <div id="rate_info" class="info" style="font-family:Delivery Regular;color: #777777;font-size: 14px;">{{rateText}}</div>
+                        </div>
+                   
+                </div>
+            </section>
+
+            <section id="status-error" class="o-container u-padding-vertical-5x u-bg-color-grey-40">
+                <span class="c-text-icon c-text-icon--center">
+                    <svg class="icons c-text-icon__icon c-text-icon--center__icon u-fill-currentColor" width="70px" height="70px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <g transform="translate(0.500000, 2.000000)">
+                            <path d="M15.3893333,5.40933333 L26.6666667,24.9093333 L4.216,24.9093333 L15.3893333,5.40933333 Z M15.3893333,0.666666667 L0,27.3333333 L30.7773333,27.3333333 L15.3906667,0.666666667 L15.3893333,0.666666667 Z M14.2293333,20.8 L16.5493333,20.8 L16.5493333,22.5906667 L14.2293333,22.5906667 L14.2293333,20.8 Z M14.2293333,12.2613333 L16.5493333,12.2613333 L16.5493333,19.3226667 L14.2293333,19.3226667 L14.2293333,12.2613333 Z" id="Shape">
+                            </path>
+                        </g>
+                    </svg>
+                    <span class="c-text-icon__label u-font-family-regular c-text-icon--center__label">
+                        {{statusErrorMessage}}
+                    </span>
+                </span>
+            </section>
+            <!--detail info-->
+            <div id="details" class="styles__shown___1rRlv o-container u-margin-vertical-5x" style="min-height: 100px;">
+                <!--details button-->
+                <a href="javascript:void(0);" (click)="hideShowDetails()" class="styles__toggle-details___3ZHKT">
+                    {{labelHideShowDetails}}
+                    <span id="hide-details-button"  class="styles__toggle-button___1uwMe styles__details-shown___2RLer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="13" viewBox="0 0 9 13">
+                            <path fill="#FFF" fill-rule="evenodd" d="M4.485 6.364L.243 2.121 2.364 0l4.243 4.243 2.12 2.121-6.363 6.364-2.121-2.121 4.242-4.243z"></path>
+                        </svg>
+                    </span>
+                </a>
+                <!--detail list-->
+                <div id="details-list" class="styles__table-wrapper___n5A-D">
+                    <div class="styles__table___5Ule6">
+                        <div id="detail-block" class="styles__block___2UkH9">
+
+                            <div id="detail-22" class="styles__row___UT_E9">
+                                <div class="styles__line___3YbA- styles__icon___3yueu">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.78 9.087h3.418v3.18h-3.42v-3.18zM11.527.5L0 12.982l1.352 1.272 1.113-1.192V23h18.047v-9.938l1.113 1.192 1.352-1.272L11.527.5zm1.83 20.592H9.62v-5.247h3.737v5.247zm5.326 0H14.31V14.97H8.826v6.122H4.452V10.995l7.156-7.712 7.155 7.95-.08 9.86z"></path>
+                                    </svg>
+                                </div>
+                                <div class="styles__category___2lOSC">livré</div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-21" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Aucune mention du nom du destinataire n'est faite à l'adresse indiquée </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-20" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Le destinataire est absent </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-19" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">L'adresse est incorrecte/inaccessible </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-18" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">La livraison au destinataire a échoué </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-17" class="styles__row___UT_E9">
+                                <div class="styles__line___3YbA- styles__icon___3yueu">
+                                    <svg width="21" height="22" viewBox="0 0 21 22" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10,1.375c-3.17,0-5.75,2.548-5.75,5.682c0,6.685,5.259,11.276,5.483,11.469c0.152,0.132,0.382,0.132,0.534,0c0.224-0.193,5.481-4.784,5.483-11.469C15.75,3.923,13.171,1.375,10,1.375 M10,17.653c-1.064-1.024-4.929-5.127-4.929-10.596c0-2.68,2.212-4.861,4.929-4.861s4.929,2.181,4.929,4.861C14.927,12.518,11.063,16.627,10,17.653 M10,3.839c-1.815,0-3.286,1.47-3.286,3.286s1.47,3.286,3.286,3.286s3.286-1.47,3.286-3.286S11.815,3.839,10,3.839 M10,9.589c-1.359,0-2.464-1.105-2.464-2.464S8.641,4.661,10,4.661s2.464,1.105,2.464,2.464S11.359,9.589,10,9.589"></path>
+                                    </svg>
+                                </div>
+                                <div class="styles__category___2lOSC">Votre colis est disponible en point de retrait. Retrouvez son adresse dans votre suivi transporteur </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-16" class="styles__row___UT_E9">
+                                <div class="styles__line___3YbA- styles__icon___3yueu">
+                                    <svg width="21" height="22" viewBox="0 0 21 22" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.94 8.948v-.1c.005-2.5.007-5.086-1.758-6.856C15.844.652 13.672 0 10.547 0 7.42 0 5.25.65 3.912 1.992 2.147 3.762 2.15 6.346 2.154 8.846v.078C.874 9.226 0 10.4 0 11.934c0 1.795.972 2.898 2.69 3.094 1.393 4.22 4.233 6.628 7.857 6.628 2.015 0 3.853-.792 5.315-2.292 1.342-1.377 2.115-3.053 2.55-4.364C20.04 14.793 21 13.68 21 11.934c0-1.497-.83-2.65-2.06-2.986zm-1.527.242c0 .752-.124 1.027-.176 1.11-.027.042-.044.067-.187.067-.41 0-1.12-.276-1.872-.568-1.278-.498-2.868-1.117-4.63-1.117s-3.353.62-4.632 1.116c-.753.29-1.462.567-1.87.567-.146 0-.162-.025-.188-.067-.054-.083-.176-.358-.176-1.11v-.16c.612-.06 1.347-.298 2.182-.566 1.318-.424 2.957-.95 4.683-.95s3.367.526 4.684.95c.835.267 1.57.503 2.183.564v.162zM4.99 3.07C6.03 2.034 7.847 1.53 10.547 1.53s4.517.505 5.554 1.543c1.217 1.22 1.308 3.158 1.313 5.25-.525-.065-1.202-.28-1.967-.527-1.365-.438-3.063-.984-4.9-.984-1.836 0-3.534.544-4.9.983-.764.246-1.44.462-1.966.527.003-2.092.095-4.03 1.31-5.25zm12.847 10.436h-.574l-.16.55c-.41 1.425-2.098 6.07-6.556 6.07-4.32 0-6.02-4.23-6.55-6.046l-.16-.55h-.573c-1.234 0-1.736-.463-1.736-1.6 0-.567.212-1.21.772-1.456.253.943.837 1.42 1.746 1.42.695 0 1.497-.313 2.425-.673 1.22-.473 2.603-1.01 4.08-1.01 1.474 0 2.856.537 4.076 1.01.928.363 1.73.673 2.425.673.896 0 1.475-.462 1.736-1.38.498.27.688.878.688 1.418-.003 1.09-.507 1.576-1.637 1.576zm-10.22-1.74c-.577 0-1.044.468-1.044 1.045 0 .578.467 1.045 1.044 1.045.576 0 1.044-.467 1.044-1.044 0-.576-.467-1.043-1.043-1.043zm5.752 0c-.578 0-1.045.468-1.045 1.045 0 .578.467 1.045 1.044 1.045.576 0 1.043-.467 1.043-1.044 0-.576-.467-1.043-1.044-1.043z"></path>
+                                    </svg>
+                                </div>
+                                <div class="styles__category___2lOSC">En cours de livraison</div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-15" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Documents de douanes manquants </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-14" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Demande de retour émise </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-13" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Colis endommagé </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-12" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Adresse erronée/incomplète </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-11" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Il y a un problème durant l'acheminement du colis </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-10" class="styles__row___UT_E9">
+                                <div class="styles__line___3YbA-"></div>
+                                <div class="styles__status___3MLpj">Votre colis est prêt à être livré et en attente de livraison </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-9" class="styles__row___UT_E9">
+                                <div class="styles__line___3YbA-"></div>
+                                <div class="styles__status___3MLpj">Votre colis est arrivé sur son site de distribution </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-8" class="styles__row___UT_E9">
+                                <div class="styles__line___3YbA- styles__icon___3yueu">
+                                    <svg width="23" height="15" viewBox="0 0 23 15" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.85 3.976c-1.263-1.27-3.135-1.247-3.378-1.24l-2.735-.007.006-2.718L.013 0 0 12.187h2.31c.266 1.116 1.27 1.955 2.47 1.955 1.198 0 2.203-.833 2.468-1.95l8.472.013v-.012h.395c.26 1.122 1.27 1.967 2.47 1.967 1.205 0 2.21-.84 2.475-1.96h1.926l.006-4.975c.03-.313.1-2.003-1.14-3.25zM4.78 12.713c-.61 0-1.106-.497-1.106-1.105s.497-1.105 1.105-1.105 1.104.497 1.104 1.105-.496 1.105-1.105 1.105zm.005-3.645c-1.105 0-2.038.703-2.393 1.69h-.95l.01-9.317 12.844.013V2.73h-.018l-.012 8.033-7.094-.006c-.35-.98-1.282-1.69-2.387-1.69zm13.806 3.657c-.608 0-1.104-.497-1.104-1.105 0-.61.496-1.105 1.105-1.105.61 0 1.105.496 1.105 1.105 0 .614-.496 1.105-1.104 1.105zm2.972-5.613l-.006.042-.006 3.61h-.573c-.354-.975-1.288-1.678-2.386-1.684-1.098 0-2.032.697-2.386 1.677h-.484l.005-6.586 2.747.007h.036c.012 0 1.447-.048 2.316.82.856.845.738 2.11.738 2.115zm-2.753-1.99H16.5l-.007 3.036 4.27.006V7.036s-.01-.963-.518-1.43c-.508-.467-1.436-.484-1.436-.484zm1.24 2.32l-2.836-.005v-1.6h1.583c.207.005.733.082.957.295.19.17.284.644.29.91l.006.4z"></path>
+                                    </svg>
+                                </div>
+                                <div class="styles__category___2lOSC">En cours d'acheminement</div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-7" class="styles__row___UT_E9">
+                                <div class="styles__line___3YbA-"></div>
+                                <div class="styles__status___3MLpj">Le colis a été expédié par X </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-6" class="styles__row___UT_E9">
+                                <div class="styles__line___3YbA-"></div>
+                                <div class="styles__status___3MLpj">Colis prêt à être pris en charge par </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-5" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Contenus hors format </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-4" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Contenu reçu endommagé </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div id="detail-3" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Adresse incorrecte </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+
+                            <div  id="detail-2" class="styles__row___UT_E9 styles__problem___AyFD3">
+                                <div class="styles__line___3YbA-">
+                                    <svg width="38" height="55" viewBox="0 0 38 55" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M11 20c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke-width="3" fill="#FFFFFF"></path>
+                                            <path d="M11 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" fill="#D0011B"></path>
+                                            <path d="M35.604 53.89s2.376-5.696-11.824-10.37c-14.2-4.675-12.558-24.547-12.558-24.547" stroke-width="4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="styles__status___3MLpj">Il y'a eu un problème avec votre envoi avant sa remise au transporteur partenaire. X vous en informe en temps réels par e-mail </div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                            <div  id="detail-1" class="styles__row___UT_E9">
+                                <div class="styles__line___3YbA- styles__icon___3yueu">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.5 6.554L11.53.184.5 6.52v9.39l10.99 6.368 11.01-6.334V6.554zm-11.02 5.79L7.835 10.27l8.957-5.193 3.696 2.146-9.008 5.12zm3.725-8.19L6.23 9.36 2.468 7.22l9.06-5.2 3.678 2.135zM2.09 8.055l8.93 5.076v7.04L2.09 14.99v-6.94zm9.842 12.135v-7.057l8.98-5.103v6.993l-8.98 5.166zm-6.11-7.122v2.815l4.075 2.303V15.37l-4.074-2.302z"></path>
+                                    </svg>
+                                </div>
+                                <div class="styles__category___2lOSC">Colis en cours de préparation</div>
+                                <div class="styles__date___-QZuh">Jun 9 3:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <app-rate-page></app-rate-page>
+    <footer class="col-md-12 col-xs-12" style="background-color:#ED6561;text-align: center;align-items: center;vertical-align:middle; min-height: 80px;">
+        <div>
+        <p style="top: 50%;font-family: Delivery Regular;color: white;"><br>2020-11-25  All rights reserved.<br>  
+        </div>
+        
+    </footer>
+
+    
+</div>
+          
